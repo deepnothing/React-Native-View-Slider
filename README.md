@@ -24,7 +24,8 @@ A robust simple lightweight library for sliding views/images/anything in react-n
     StyleSheet,
     View,
     Text,
-    Dimensions
+    Dimensions,
+    Image
     } from 'react-native';
     import ViewSlider from 'react-native-view-slider'
 
@@ -33,7 +34,7 @@ A robust simple lightweight library for sliding views/images/anything in react-n
     function App() {
       return (
         <>
-          <View_Slider 
+          <ViewSlider 
             renderSlides = {
               <>
                 <View style={styles.viewBox}>
@@ -74,7 +75,9 @@ A robust simple lightweight library for sliding views/images/anything in react-n
           backgroundColor: 'pink'
       },
       dotContainer: {
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        position: 'absolute',
+        bottom: 15
       }
     });
 
@@ -86,8 +89,10 @@ A robust simple lightweight library for sliding views/images/anything in react-n
 * renderSlides : Views/sliders content 
 * style : slider container style[ Full customize your slider container with style prop ]
 * height : Your slider height
-* slidesCount : Number of slides you are giving [Required]
+* slideCount : Number of slides you are giving [Required]
 * dots : default false [If you want the slider dots to be shown set it to true]
 * dotActiveColor : active dot color
 * dotInactiveColor : Inactive dot color 
 * dotsContainerStyle
+* autoSlide : The views will slide automatically
+* slideInterval :  In Miliseconds
